@@ -16,11 +16,11 @@ Ensure that you are in the right directory.
 
 From the search resources bar search for 'AAD' and select Azure Active Directory. 
 
-![02-SearchAad](Images\02-SearchAad.png)
+![02-SearchAad](Images/02-SearchAad.png)
 
 Go to 'App registrations' and select 'New registration'
 
-![03-NewRegistration](Images\03-NewRegistration.png)
+![03-NewRegistration](Images/03-NewRegistration.png)
 
 <br/>
 
@@ -34,7 +34,7 @@ Fill in the form according to the environment to be configured.
 
 <br/>
 
-![04-ServicePrincipalRegistrationForm](Images\04-ServicePrincipalRegistrationForm.png)
+![04-ServicePrincipalRegistrationForm](Images/04-ServicePrincipalRegistrationForm.png)
 
 Open your newly created App registration from the App registrations page. 
 
