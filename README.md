@@ -1,0 +1,2 @@
+# AzureDeploymentTemplate
+Basic Azure infrastructure 
