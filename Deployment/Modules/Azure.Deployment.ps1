@@ -104,6 +104,31 @@ function get-ParameterReferenceLatestFromKeyVault
 	return $kvReference
 }
 
+function get-ParameterValueFromKeyVault
+{
+	param(
+	[Parameter(Mandatory = $true)] 
+	[String]$KeyVaultName,
+	[Parameter(Mandatory = $true)] 
+	[String]$ParameterName
+	)
+	$ErrorActionPreference = "Stop"
+
+	$kvSecret = Get-AzKeyVaultSecret -VaultName $KeyVaultName -Name $ParameterName
+	if ($kvSecret -eq $null)
+	{write-error "Could'nt get $ParameterName from keyvault"  }
+	$SecureString = $kvSecret.SecretValue
+
+	$SecretText = [System.Net.NetworkCredential]::new("", $SecureString).Password
+	if ([string]::IsNullOrEmpty($SecretText)) {
+		write-error "SecretText is null or empty" 
+	}
+
+	return $SecretText
+}
+
+
+
 ##usage:
 #$resourceGroupName = $PA_EnvironmentVars.Configuration.Azure.ResourceGroupName
 #$webAppname = $PA_EnvironmentVars.Configuration.Azure.ReceiveAzureFunction.name
