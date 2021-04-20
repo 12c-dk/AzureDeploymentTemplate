@@ -2,9 +2,11 @@
 
 **Prerequisites:**
 
-You need Owner permissions to an Azure Resource Group. 
+- An Azure Subscription. 
 
-You need to have permissions to create 'App registrations' in your AAD (Azure Active Directory Tenant). This is allowed by default, but might have been restricted in your AAD tenant. See [Delegate app registration permissions in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/roles/delegate-app-roles) for further details.
+- Owner permissions to the Azure subscription or an Azure Resource Group. 
+
+- You need to have permissions to create 'App registrations' in your AAD (Azure Active Directory Tenant). This is allowed by default, but might have been restricted in your AAD tenant. See [Delegate app registration permissions in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/roles/delegate-app-roles) for details on how to provide access.
 
 **Open portal.azure.com.**
 
@@ -29,7 +31,7 @@ Fill in the form according to the environment to be configured.
 |Name|Sample value|
 |-|-|
 |Name|Provide a meaningfull name here|
-|Supported account types|Accounts in this organizational directory only|
+|Who can use this application or access this API?|Accounts in this organizational directory only|
 |Redirect URI|Not necessary for service connection|
 
 <br/>
@@ -70,7 +72,7 @@ Click 'Save'
 
 ![](Images\ResourceGroupPermission.png)
 
-Click the just added identity (i.e. MyServiceConnectionPrincipal)
+Select the newly created identity (i.e. MyServiceConnectionPrincipal)
 
 Copy the Object ID. (In the form of a GUID)
 
