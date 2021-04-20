@@ -14,14 +14,6 @@ variables:
   value: 'AzureFunctions.Api'
   
 stages:
-- stage: TestVariableGroup
-  displayName: TestVariableGroup
-  jobs:
-  - template: test-variable-group.yml
-    parameters:
-      variableGroup: 'test-variable-group'
-      variableNames: '"$(ServiceUserName)", "$(ServicePassword)"'
-
 - stage: Build
   displayName: Build
   jobs:
@@ -36,14 +28,7 @@ stages:
   jobs:  
   - template: deploy-azure.yml
     parameters:
-      environment: "GitHubTest"
-      targetJson: "GitHubTest.json"
-      serviceConnection: "DevOps-AzureDeploymentTemplate"
+      environment: "Dev"
+      targetJson: "Dev.json"
+      serviceConnection: "MyServiceConnectionPrincipal"
 
-- stage: TestVariableGroupAfter
-  displayName: TestVariableGroupAfter
-  jobs:
-  - template: test-variable-group.yml
-    parameters:
-      variableGroup: 'test-variable-group'
-      variableNames: '"$(ServiceUsername)", "$(ServicePassword)"'

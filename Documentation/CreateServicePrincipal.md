@@ -80,6 +80,8 @@ Copy the Object ID. (In the form of a GUID)
 
 Update the dev.json configuration file setting 'ServiceConnectionObjectId' with the copied Object Id.
 
+
+
 ## Create service connection in Azure DevOps
 
 Navigate to Service connections in Azure DevOps.
@@ -107,5 +109,7 @@ Enter the App registration name as the 'Service connection name'.
 Click 'Verify and save'.
 
 Now the service connection is ready to be used in Azure DevOps pipelines. 
+
+In azure-pipelines.yml, update the serviceConnection parameter in the Deploy_Dev stage to match the name of your newly created service connection (i.e. MyServiceConnectionPrincipal)
 
 [Back to Readme](../Readme.md)
