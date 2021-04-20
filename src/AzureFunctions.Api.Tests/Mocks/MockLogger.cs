@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit.Abstractions;
 
-namespace AzureFunctions.Api.Tests.Managers
+namespace AzureFunctions.Api.Tests.Mocks
 {
     /// <summary>
     /// A MOCK logger to be used in unit tests.

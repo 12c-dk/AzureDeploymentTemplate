@@ -1,5 +1,5 @@
 using AzureFunctions.Api.Managers;
-using AzureFunctions.Api.Tests.Managers;
+using AzureFunctions.Api.Tests.Mocks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Primitives;

@@ -8,7 +8,7 @@ using Moq;
 using System.Net.Http;
 using Microsoft.AspNetCore.Http;
 
-namespace AzureFunctions.Api.Tests.Managers
+namespace AzureFunctions.Api.Tests.Mocks
 {
     public class HttpMock
     {
