@@ -18,11 +18,11 @@ Ensure that you are in the right directory.
 
 From the search resources bar search for 'AAD' and select Azure Active Directory. 
 
-![02-SearchAad](Images\02-SearchAad.png)
+![02-SearchAad](Images/02-SearchAad.png)
 
 Go to 'App registrations' and select 'New registration'
 
-![03-NewRegistration](Images\03-NewRegistration.png)
+![03-NewRegistration](Images/03-NewRegistration.png)
 
 <br/>
 
@@ -36,7 +36,7 @@ Fill in the form according to the environment to be configured.
 
 <br/>
 
-![04-ServicePrincipalRegistrationForm](Images\04-ServicePrincipalRegistrationForm.png)
+![04-ServicePrincipalRegistrationForm](Images/04-ServicePrincipalRegistrationForm.png)
 
 Click 'Register'
 
@@ -50,7 +50,7 @@ Click 'New client secret'
 
 Provide a meaningful description, select '12 months' og klik 'Add'.
 
-![](Images\AddSecret.png)
+![AddSecret](Images/AddSecret.png)
 
 Copy the secret value. This is needed for the Service connection configuration.
 
@@ -70,13 +70,13 @@ Enter the app registration name (i.e. MyServiceConnectionPrincipal) in the selec
 
 Click 'Save'
 
-![](Images\ResourceGroupPermission.png)
+![ResourceGroupPermission](Images/ResourceGroupPermission.png)
 
 Select the newly created identity (i.e. MyServiceConnectionPrincipal)
 
 Copy the Object ID. (In the form of a GUID)
 
-![](Images\CopyObjectId.png)
+![CopyObjectId](Images/CopyObjectId.png)
 
 Update the dev.json configuration file setting 'ServiceConnectionObjectId' with the copied Object Id.
 
