@@ -112,4 +112,3 @@ Now the service connection is ready to be used in Azure DevOps pipelines.
 
 In azure-pipelines.yml, update the serviceConnection parameter in the Deploy_Dev stage to match the name of your newly created service connection (i.e. MyServiceConnectionPrincipal)
 
-[Back to Readme](../Readme.md)
