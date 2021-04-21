@@ -39,5 +39,11 @@ Setting this up for your own environment requires the following:
 
 ## Adding a new environment
 
-Copy an existing environment.json file, like dev.json, to an appropriate name, i.e. test.json
-Edit test.json and adjust parameters according to the new environment. 
+- Copy an existing environment.json file, like dev.json, to an appropriate name, i.e. test.json
+- Edit test.json and adjust parameters according to the new environment. 
+- In azure-pipelines copy the Deploy_Dev stage section, paste it and modify the new section stage name, displayname, environment, targetJson and serviceConnection parameters
+
+You can test locally by navigating to the Deployment folder of the project and initiating install. I.e.: 
+```
+.\Install.ps1 .\Test.json
+```
