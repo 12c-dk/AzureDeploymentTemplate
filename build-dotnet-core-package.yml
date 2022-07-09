@@ -7,7 +7,7 @@ parameters:
 jobs:
 - job: ${{ parameters.jobTitle }}
   pool:
-    vmImage: 'windows-2019'
+    vmImage: 'windows-latest'
   condition: succeeded()
   continueOnError: false
   workspace:
