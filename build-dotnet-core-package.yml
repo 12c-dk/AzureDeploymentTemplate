@@ -7,7 +7,7 @@ parameters:
 jobs:
 - job: ${{ parameters.jobTitle }}
   pool:
-    vmImage: 'windows-2019'
+    vmImage: 'windows-latest'
   condition: succeeded()
   continueOnError: false
   workspace:
@@ -17,6 +17,11 @@ jobs:
     build_configuration: 'Release'
 
   steps:
+  - task: UseDotNet@2
+    displayName: 'Use .NET SDK'
+    inputs:
+      useGlobalJson: false
+
   # Perform .Net Core Restore
   - task: DotNetCoreCLI@2
     displayName: Restore

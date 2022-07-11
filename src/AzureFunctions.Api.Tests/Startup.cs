@@ -16,7 +16,6 @@ namespace AzureFunctions.Api.Tests
 
         public void ConfigureServices(IServiceCollection services)
         {
-            ConfigManager _configManager = new ConfigManager();
             services.AddLogging();
 
             services.AddSingleton<ConfigManager>();
